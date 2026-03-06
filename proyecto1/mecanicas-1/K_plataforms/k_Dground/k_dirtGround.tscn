@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bhdjjjqsyw3rr"]
+
+[ext_resource type="Script" uid="uid://beiovxrxm2nf7" path="res://K_plataforms/k_Dground/kDirtGround.gd" id="1_my1kg"]
+[ext_resource type="Texture2D" uid="uid://co0eyip88jje6" path="res://environment/ground/killers/dirtKiller.png" id="1_n2eni"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_my1kg"]
+size = Vector2(33, 32)
+
+[node name="dirtKiller" type="Node2D" unique_id=1369146375]
+script = ExtResource("1_my1kg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=510320818]
+texture = ExtResource("1_n2eni")
+
+[node name="dirtPinchos" type="Area2D" parent="." unique_id=980901272]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dirtPinchos" unique_id=1817081749]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_my1kg")
+
+[connection signal="body_entered" from="dirtPinchos" to="." method="_on_dirt_pinchos_body_entered"]

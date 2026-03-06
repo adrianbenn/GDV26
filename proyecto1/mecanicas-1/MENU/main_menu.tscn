@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://hf5l4g5w4s32"]
+
+[ext_resource type="Texture2D" uid="uid://baqrnrv3w615l" path="res://MENU/background.png" id="1_ecigt"]
+[ext_resource type="Script" uid="uid://bi15dlera4ga" path="res://MENU/main_menu.gd" id="1_gnxuf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gnxuf"]
+bg_color = Color(0.81960785, 0, 0.29411766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50un6"]
+bg_color = Color(0.81960785, 0, 0.29411766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_du1em"]
+bg_color = Color(0.8200666, 0, 0.2940677, 1)
+
+[node name="mainMenu" type="Control" unique_id=1043443261]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gnxuf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=171392345]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.427493, 0.42749307, 0.42749307, 0.99607843)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=2142823253]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ecigt")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=103333986]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -79.5
+offset_right = 225.0
+offset_bottom = 140.5
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Play" type="Button" parent="ColorRect/VBoxContainer" unique_id=1132378247]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gnxuf")
+text = "Jugar"
+
+[node name="Options" type="Button" parent="ColorRect/VBoxContainer" unique_id=458029672]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_50un6")
+text = "Opciones"
+
+[node name="Quit" type="Button" parent="ColorRect/VBoxContainer" unique_id=1600237554]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_du1em")
+text = "Salir"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

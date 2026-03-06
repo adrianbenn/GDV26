@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bc8h8803cyttg"]
+
+[ext_resource type="Texture2D" uid="uid://dlc25pva2458a" path="res://enemy/enemyIdle/enIdle.png" id="1_4gwse"]
+[ext_resource type="Script" uid="uid://caq8e87nu2siu" path="res://enemy/bicho.gd" id="1_chjx2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chjx2"]
+atlas = ExtResource("1_4gwse")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3s24"]
+atlas = ExtResource("1_4gwse")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j662g"]
+atlas = ExtResource("1_4gwse")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6bl6"]
+atlas = ExtResource("1_4gwse")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kbeq5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chjx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3s24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j662g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6bl6")
+}],
+"loop": true,
+"name": &"enIdle",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gwse"]
+size = Vector2(7, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chjx2"]
+size = Vector2(7, 3)
+
+[node name="bicho" type="Node2D" unique_id=2109036313]
+script = ExtResource("1_chjx2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1174094108]
+sprite_frames = SubResource("SpriteFrames_kbeq5")
+animation = &"enIdle"
+autoplay = "enIdle"
+frame = 3
+frame_progress = 0.612077
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=1903310511]
+
+[node name="topBicho" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D" unique_id=128031823]
+position = Vector2(0.5, -3.5)
+shape = SubResource("RectangleShape2D_4gwse")
+
+[node name="DownArea2D" type="Area2D" parent="." unique_id=192390629]
+
+[node name="bottomBicho" type="CollisionShape2D" parent="DownArea2D" unique_id=1453522325]
+position = Vector2(0.5, 3.5)
+shape = SubResource("RectangleShape2D_chjx2")
+
+[connection signal="body_entered" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="DownArea2D" to="." method="_on_down_area_2d_body_entered"]

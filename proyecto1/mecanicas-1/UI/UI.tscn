@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bh3mggllwx5vp"]
+
+[ext_resource type="Texture2D" uid="uid://dlysmvjxp8wro" path="res://objects/piquillin.png" id="1_6dd3c"]
+[ext_resource type="Script" uid="uid://bs1u8i8v5w8p" path="res://UI/ui.gd" id="1_dhe1o"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1385276138]
+script = ExtResource("1_dhe1o")
+
+[node name="Control" type="Control" parent="." unique_id=321638702]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=392213278]
+layout_mode = 0
+offset_left = 99.0
+offset_right = 185.0
+offset_bottom = 103.0
+theme_override_font_sizes/font_size = 75
+text = "00"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1868867076]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1640483998]
+position = Vector2(64, 56)
+scale = Vector2(5, 5)
+texture = ExtResource("1_6dd3c")
+hframes = 8
