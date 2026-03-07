@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="mecanicas1"
-run/main_scene="uid://dsuboi3gnjfa8"
+run/main_scene="uid://hf5l4g5w4s32"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
