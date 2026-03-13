@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dk05yl013sxhn"]
+
+[ext_resource type="Texture2D" uid="uid://bs07j01q6ghn6" path="res://assets/cartaBase.png" id="1_dd2wi"]
+[ext_resource type="Script" uid="uid://nbs3wqo8fr38" path="res://Card.gd" id="1_hael8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glv2v"]
+size = Vector2(130, 195)
+
+[node name="card" type="Node2D" unique_id=471920642]
+position = Vector2(150, 520)
+script = ExtResource("1_hael8")
+
+[node name="cardImage" type="Sprite2D" parent="." unique_id=2030337016]
+texture = ExtResource("1_dd2wi")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1739547333]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1559175813]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_glv2v")
+
+[node name="Attack" type="RichTextLabel" parent="." unique_id=1002433100]
+modulate = Color(0, 0, 0, 1)
+offset_left = -50.0
+offset_top = 45.0
+offset_right = -10.0
+offset_bottom = 85.0
+scale = Vector2(2, 2)
+text = "0"
+
+[node name="Health" type="RichTextLabel" parent="." unique_id=1196981841]
+modulate = Color(0, 0, 0, 1)
+offset_left = 30.0
+offset_top = 45.0
+offset_right = 70.0
+offset_bottom = 85.0
+scale = Vector2(2, 2)
+text = "0"
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

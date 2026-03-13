@@ -13,12 +13,11 @@ config_version=5
 config/name="cardGame"
 run/main_scene="uid://1lo30hl83y4f"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"
 
 [display]
 
-window/size/viewport_width=700
-window/size/viewport_height=400
+window/size/viewport_width=900
 window/vsync/vsync_mode=0
 
 [dotnet]
