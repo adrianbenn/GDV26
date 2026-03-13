@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mvk66vfagnqk"
-path="res://.godot/imported/rockKiller.png-c56e0acb92ece8e9a2fdfff2eaf1319f.ctex"
+uid="uid://5mk74scbaaap"
+path="res://.godot/imported/ArcherCard.png-5ace65ad4e55b2a25bcf12246134d2aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://environment/ground/killers/rockKiller.png"
-dest_files=["res://.godot/imported/rockKiller.png-c56e0acb92ece8e9a2fdfff2eaf1319f.ctex"]
+source_file="res://assets/ArcherCard.png"
+dest_files=["res://.godot/imported/ArcherCard.png-5ace65ad4e55b2a25bcf12246134d2aa.ctex"]
 
 [params]
 

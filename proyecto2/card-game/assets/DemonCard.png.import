@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c05o40uqoydvb"
-path="res://.godot/imported/dirtGround0.png-7a5dae761e4f162736fd0919f3c555ff.ctex"
+uid="uid://d26fooiqgwgow"
+path="res://.godot/imported/DemonCard.png-b225c8ba7310283bc70bda6924f0d146.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://environment/ground/dirt/dirtGround0.png"
-dest_files=["res://.godot/imported/dirtGround0.png-7a5dae761e4f162736fd0919f3c555ff.ctex"]
+source_file="res://assets/DemonCard.png"
+dest_files=["res://.godot/imported/DemonCard.png-b225c8ba7310283bc70bda6924f0d146.ctex"]
 
 [params]
 
