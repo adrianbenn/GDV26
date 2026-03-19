@@ -37,7 +37,7 @@ func finish_drag():
 		player_hand_reference.remove_card_from_hand(card_being_dragged)
 	# card dropped in empty card slot
 		card_being_dragged.position = card_slot_found.position
-		card_being_dragged.get_node("Area2D/CollisionShape2D").disable = true
+		card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
 		card_slot_found.card_in_slot = true
 	else:
 		player_hand_reference.add_card_to_hand(card_being_dragged, DEFAULT_CARD_MOVE_SPEED)

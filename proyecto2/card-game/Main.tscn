@@ -6,21 +6,12 @@
 [ext_resource type="Script" uid="uid://dylkw5myi36mt" path="res://Deck.gd" id="5_3dxm6"]
 [ext_resource type="Texture2D" uid="uid://c0fbfcm05sulp" path="res://assets/Deck.png" id="5_fos0i"]
 [ext_resource type="AudioStream" uid="uid://bj74cg7b3tgg0" path="res://Titan_s_Fury_Unleashed.mp3" id="7_lgr22"]
-[ext_resource type="Texture2D" uid="uid://b1xdu5had1l56" path="res://table.png" id="8_03owx"]
 [ext_resource type="Script" uid="uid://c8noo5cdx5gxo" path="res://inputManager.gd" id="8_trn2v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fos0i"]
 size = Vector2(131, 196)
 
 [node name="Main" type="Node2D" unique_id=633577275]
-
-[node name="Node2D" type="Node2D" parent="." unique_id=407057202]
-z_index = -3
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1102155127]
-position = Vector2(564.9999, 330.5)
-scale = Vector2(1.0767044, 1.0585938)
-texture = ExtResource("8_03owx")
 
 [node name="cardManager" type="Node2D" parent="." unique_id=1523193574]
 script = ExtResource("1_uu6xs")
